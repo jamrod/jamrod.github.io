@@ -2,49 +2,59 @@ body {
     min-height: 100vh;
     margin: 0 auto;
     font: 12pt Comic Sans MS;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     background-color: gray;
     background-image: url(assets/images/bkgrnd.jpg);
     background-repeat: no-repeat;
     background-size: cover;
   }
+  .container {
+      display: grid;
+      grid-template-rows: 1fr 6fr 1fr;
+      grid-template-columns: 1fr 4fr;
+  }
+
+
   
   header {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    line-height: 30px;
-    font-family: 'Rubik', sans-serif;
-    font-style: Medium;
+      grid-column: 1 /span 2;
+      grid-row: 1;
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      line-height: 30px;
+      font-family: 'Rubik', sans-serif;
+       font-style: Medium;
   }
   
-.subHead {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    font-family: 'Rubik', sans-serif;
+  .subHead {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      font-family: 'Rubik', sans-serif;
 }
 
   main {
-    margin: 0 auto;
-    font-family: 'Rubik', sans-serif;
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: left;
+      grid-column: 2;
+      grid-row: 2;
+      margin: 0 auto;
+      font-family: 'Rubik', sans-serif;
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: left;
 
   }
   
   section {
-    width: 100px;
-    border-radius: 10px;
-    margin: 5px;
-    text-align: center;
-    line-height: 100px;
+      width: 100px;
+      border-radius: 10px;
+      margin: 5px;
+      text-align: center;
+      line-height: 100px;
   }
 
 nav {
+    grid-row: 2;
+    grid-column: 1;
     max-width: 300px;
     display: flex;
     flex-direction: column;
@@ -54,19 +64,19 @@ nav {
 
 }
 
-a:link {
+nav a:link {
     color:red;
 }
 
-a:visited {
+nav a:visited {
     color: darkred;
 }
 
-a:hover {
+nav a:hover {
     color: #8a90c5;
 }
 
-a:active {
+nav a:active {
     color: crimson;
 }
 
@@ -75,6 +85,8 @@ ul {
 }
 
 footer {
+    grid-row: 3;
+    grid-column: 1 /span 2;
     text-align: center;
     width: 100%;
     height: 30px;
@@ -85,9 +97,6 @@ footer {
 .foot {
     display: inline;
     text-align: center;
-    /* display: flex;
-    flex-direction: row;
-    justify-content: baseline; */
 }
 
 li {
