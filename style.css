@@ -62,6 +62,10 @@ nav {
 
 }
 
+a {
+    text-decoration: none;
+}
+
 nav a:link {
     color:red;
 }
